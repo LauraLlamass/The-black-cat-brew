@@ -47,7 +47,7 @@ function CoffeesPage() {
         ) : error ? (
           <p className="text-lg">{error}</p>
         ) : (
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
             {coffees.map((coffee) => (
               <CoffeeCard key={coffee.id} coffee={coffee} />
             ))}

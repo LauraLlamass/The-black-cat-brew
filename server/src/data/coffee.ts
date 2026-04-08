@@ -1,3 +1,5 @@
+
+
 export const coffees = [
   {
     id: "1",
@@ -7,7 +9,7 @@ export const coffees = [
     acidity: "high",
     notes: ["fruity", "citrus"],
     description: "Smooth coffee with fruity notes.",
-    image: "",
+    image: "http://localhost:3000/images/bolsa.png",
     amazonUrl: "https://amazon.com",
   },
   {
@@ -18,7 +20,7 @@ export const coffees = [
     acidity: "high",
     notes: ["floral", "tea-like"],
     description: "Delicate and aromatic coffee.",
-    image: "",
+    image: "http://localhost:3000/images/cafe.png",
     amazonUrl: "https://amazon.com",
   },
   {
@@ -29,7 +31,7 @@ export const coffees = [
     acidity: "low",
     notes: ["chocolate", "nuts"],
     description: "Balanced coffee with sweet chocolate notes.",
-    image: "",
+    image: "http://localhost:3000/images/cafeFiltro.png",
     amazonUrl: "https://amazon.com",
   },
   {
@@ -40,7 +42,7 @@ export const coffees = [
     acidity: "high",
     notes: ["berries", "wine"],
     description: "Bright coffee with juicy and complex flavors.",
-    image: "",
+    image: "http://localhost:3000/images/cafeFrancesa.png",
     amazonUrl: "https://amazon.com",
   },
   {
@@ -51,7 +53,7 @@ export const coffees = [
     acidity: "medium",
     notes: ["cocoa", "spice"],
     description: "Elegant profile with cocoa and subtle spice.",
-    image: "",
+    image: "http://localhost:3000/images/cafeItaliana.png",
     amazonUrl: "https://amazon.com",
   },
   {
@@ -62,7 +64,7 @@ export const coffees = [
     acidity: "high",
     notes: ["honey", "citrus"],
     description: "Clean and sweet coffee with lively acidity.",
-    image: "",
+    image: "http://localhost:3000/images/cuchara.png",
     amazonUrl: "https://amazon.com",
   },
   {
@@ -73,7 +75,7 @@ export const coffees = [
     acidity: "medium",
     notes: ["caramel", "fruit"],
     description: "Soft and smooth cup with caramel sweetness.",
-    image: "",
+    image: "http://localhost:3000/images/hotCafe.png",
     amazonUrl: "https://amazon.com",
   },
   {
@@ -84,7 +86,7 @@ export const coffees = [
     acidity: "medium",
     notes: ["cocoa", "brown sugar"],
     description: "Sweet and comforting coffee with mellow body.",
-    image: "",
+    image: "http://localhost:3000/images/iceCafe.png",
     amazonUrl: "https://amazon.com",
   },
   {
@@ -95,40 +97,7 @@ export const coffees = [
     acidity: "high",
     notes: ["red fruit", "tea"],
     description: "Vibrant coffee with a delicate tea-like finish.",
-    image: "",
-    amazonUrl: "https://amazon.com",
-  },
-  {
-    id: "10",
-    name: "El Salvador Pacamara",
-    origin: "El Salvador",
-    intensity: "medium",
-    acidity: "medium",
-    notes: ["orange", "caramel"],
-    description: "Sweet cup with citrus sparkle and creamy body.",
-    image: "",
-    amazonUrl: "https://amazon.com",
-  },
-  {
-    id: "11",
-    name: "Nicaragua Jinotega",
-    origin: "Nicaragua",
-    intensity: "medium",
-    acidity: "low",
-    notes: ["nuts", "vanilla"],
-    description: "Gentle coffee with nutty and vanilla notes.",
-    image: "",
-    amazonUrl: "https://amazon.com",
-  },
-  {
-    id: "12",
-    name: "Panama Boquete",
-    origin: "Panama",
-    intensity: "light",
-    acidity: "high",
-    notes: ["jasmine", "tropical fruit"],
-    description: "Floral and refined coffee with bright complexity.",
-    image: "",
+    image: "http://localhost:3000/images/taza.png",
     amazonUrl: "https://amazon.com",
   },
 ];
