@@ -16,13 +16,13 @@ function Navbar() {
             to="/"
             className="text-sm font-medium text-[#7a5447] transition hover:text-[#daa77a]"
           >
-            Home
+            Inicio
           </Link>
 
           <Link to="/catalogo"
             className="text-sm font-medium text-[#7a5447] transition hover:text-[#daa77a]"
           >
-            Catálogo
+            Cafés
           </Link>
 
           <Link
@@ -38,7 +38,7 @@ function Navbar() {
             to="/favorites"
             className="rounded-full border border-[#7a5447] px-5 py-2 text-sm font-semibold text-[#7a5447] transition hover:bg-[#7a5447] hover:text-[#ffffff]"
           >
-            Mis cafés
+            Mis favoritos
           </Link>
 
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#daa77a] text-sm font-bold text-[#7a5447]">

@@ -1,5 +1,8 @@
 import Hero from "../components/Hero";
 import InfoStrip from "../components/InfoStrip";
+import CoffeeForm from "../components/CoffeeForm";
+
+<CoffeeForm />
 
 function HomePage() {
   return (

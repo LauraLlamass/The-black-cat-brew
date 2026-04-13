@@ -1,27 +1,15 @@
-import { useEffect, useState } from "react";
-import { getCoffees } from "../api/client";
+import { useMemo } from "react";
 import CoffeeCard from "../components/CoffeeCard";
 import SectionHeading from "../components/SectionHeading";
-import type { Coffee } from "../types/coffee";
 import granos from "../assets/fondoGranos.png";
+import { useCoffees } from "../hooks/useCoffees";
 
 function CoffeesPage() {
-  const [coffees, setCoffees] = useState<Coffee[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  const { coffees, loading, error } = useCoffees();
 
-  useEffect(() => {
-    getCoffees()
-      .then((data) => {
-        setCoffees(data);
-      })
-      .catch(() => {
-        setError("No se pudieron cargar los cafés");
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, []);
+  const sortedCoffees = useMemo(() => {
+    return [...coffees].sort((a, b) => a.name.localeCompare(b.name));
+  }, [coffees]);
 
   return (
     <section
@@ -48,7 +36,7 @@ function CoffeesPage() {
           <p className="text-lg">{error}</p>
         ) : (
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-            {coffees.map((coffee) => (
+            {sortedCoffees.map((coffee) => (
               <CoffeeCard key={coffee.id} coffee={coffee} />
             ))}
           </div>

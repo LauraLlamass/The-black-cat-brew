@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useCallback } from "react";
 import type { Coffee } from "../types/coffee";
 
 interface FavoritesContextType {
@@ -12,17 +12,17 @@ const FavoritesContext = createContext<FavoritesContextType | undefined>(undefin
 export function FavoritesProvider({ children }: { children: React.ReactNode }) {
   const [favorites, setFavorites] = useState<Coffee[]>([]);
 
-  const addFavorite = (coffee: Coffee) => {
+  const addFavorite = useCallback((coffee: Coffee) => {
     setFavorites((prev) => {
       const alreadyExists = prev.some((item) => item.id === coffee.id);
       if (alreadyExists) return prev;
       return [...prev, coffee];
     });
-  };
+  }, []);
 
-  const removeFavorite = (id: string) => {
+  const removeFavorite = useCallback((id: string) => {
     setFavorites((prev) => prev.filter((coffee) => coffee.id !== id));
-  };
+  }, []);
 
   return (
     <FavoritesContext.Provider value={{ favorites, addFavorite, removeFavorite }}>
