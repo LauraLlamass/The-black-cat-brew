@@ -163,7 +163,7 @@ Frontend (React)
 Renderizado en componentes
 ```
 
-# Cliente de API y tipos
+# Cliente de API y tipos, 12
 
 ## Cliente de API
 
