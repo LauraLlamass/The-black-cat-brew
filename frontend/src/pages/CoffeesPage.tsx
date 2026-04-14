@@ -14,7 +14,7 @@ function CoffeesPage() {
   return (
     <section
       id="catalogo"
-      className="py-14"
+      className="bg-secondary py-14"
       style={{
         backgroundImage: `url(${granos})`,
         backgroundRepeat: "repeat",
@@ -22,18 +22,22 @@ function CoffeesPage() {
         backgroundPosition: "center",
       }}
     >
-      <div className="mx-auto max-w-7xl px-6 text-[#7a5447]">
+      <div className="mx-auto max-w-7xl px-6 text-primary">
         <SectionHeading
           title="Descubre nuestros cafés"
           description="Una selección pensada para explorar distintos perfiles de sabor, orígenes y estilos de café."
         />
 
         {loading ? (
-          <p className="text-lg">Cargando cafés...</p>
+          <div className="mt-10 rounded-[1.5rem] bg-secondary p-6 text-center text-primary shadow-md">
+            Cargando cafés...
+          </div>
         ) : error ? (
-          <p className="text-lg">{error}</p>
+          <div className="mt-10 rounded-[1.5rem] bg-accent/10 p-6 text-center text-accent">
+            {error}
+          </div>
         ) : (
-          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 md:grid-cols-3">
             {sortedCoffees.map((coffee) => (
               <CoffeeCard key={coffee.id} coffee={coffee} />
             ))}

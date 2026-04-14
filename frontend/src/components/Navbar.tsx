@@ -2,56 +2,50 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <header className="bg-[#fcedd6]">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+    <header className="sticky top-0 z-50 border-b border-secondary/40 bg-primary/95 backdrop-blur">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        {/* Logo */}
         <Link
           to="/"
-          className="text-3xl font-bold tracking-tight text-[#7a5447]"
+          className="text-2xl font-semibold tracking-tight text-brand-white"
         >
           The Black Cat Brew
         </Link>
 
+        {/* Nav */}
         <nav className="hidden items-center gap-8 md:flex">
           <Link
             to="/"
-            className="text-sm font-medium text-[#7a5447] transition hover:text-[#daa77a]"
+            className="rounded-full border border-secondary/40 px-5 py-2 text-sm font-medium text-secondary transition hover:text-accent"
           >
             Inicio
           </Link>
 
-          <Link to="/catalogo"
-            className="text-sm font-medium text-[#7a5447] transition hover:text-[#daa77a]"
+          <Link
+            to="/catalogo"
+            className="rounded-full border border-secondary/40 px-5 py-2 text-sm font-medium text-secondary transition hover:text-accent"
           >
             Cafés
           </Link>
 
-          <Link
-            to="/favorites"
-            className="text-sm font-medium text-[#7a5447] transition hover:text-[#daa77a]"
-          >
-            Favoritos
-          </Link>
 
           <Link
             to="/about"
-            className="text-sm font-medium text-[#7a5447] transition hover:text-[#daa77a]"
+            className="rounded-full border border-secondary/40 px-5 py-2 text-sm font-medium text-secondary transition hover:text-accent"
           >
             Sobre nosotros
           </Link>
-
         </nav>
 
+        {/* Actions */}
         <div className="flex items-center gap-3">
           <Link
             to="/favorites"
-            className="rounded-full border border-[#7a5447] px-5 py-2 text-sm font-semibold text-[#7a5447] transition hover:bg-[#7a5447] hover:text-[#ffffff]"
+            className="rounded-full border border-secondary/40 px-5 py-2 text-sm font-semibold text-secondary transition hover:bg-accent hover:text-brand-white"
           >
-            Mis favoritos
+            ☕
           </Link>
 
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#daa77a] text-sm font-bold text-[#7a5447]">
-            ☕
-          </div>
         </div>
       </div>
     </header>

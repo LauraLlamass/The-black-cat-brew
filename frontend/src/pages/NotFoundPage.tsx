@@ -1,24 +1,35 @@
 import { Link } from "react-router-dom";
+import granos from "../assets/fondoGranos.png";
 
 function NotFoundPage() {
   return (
-    <main className="mx-auto flex min-h-[70vh] max-w-7xl flex-col items-center justify-center px-6 text-center">
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7c895e]">
-        Error
-      </p>
+    <main
+      className="flex min-h-[80vh] items-center justify-center bg-secondary px-6 text-center"
+      style={{
+        backgroundImage: `url(${granos})`,
+        backgroundRepeat: "repeat",
+        backgroundSize: "180px",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="max-w-md rounded-[2rem] border border-secondary/40 bg-secondary p-10 shadow-xl shadow-black/10">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">
+          Error
+        </p>
 
-      <h1 className="mt-3 text-5xl font-black text-[#7a5447]">404</h1>
+        <h1 className="mt-3 text-5xl font-semibold text-secondary">404</h1>
 
-      <p className="mt-4 max-w-md text-sm leading-7 text-[#7a5447]">
-        La página que buscas no existe o ha sido movida.
-      </p>
+        <p className="mt-4 text-sm leading-7 text-secondary/80">
+          La página que buscas no existe o ha sido movida.
+        </p>
 
-      <Link
-        to="/"
-        className="mt-8 rounded-full bg-[#7a5447] px-6 py-3 text-sm font-semibold text-[#ffffff] transition hover:bg-[#daa77a] hover:text-[#7a5447]"
-      >
-        Volver al catálogo
-      </Link>
+        <Link
+          to="/"
+          className="mt-8 inline-flex items-center justify-center rounded-full bg-secondary px-6 py-3 text-sm font-semibold text-brand-white transition hover:bg-primary hover:text-secondary"
+        >
+          Volver al catálogo
+        </Link>
+      </div>
     </main>
   );
 }

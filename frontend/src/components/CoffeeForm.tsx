@@ -12,16 +12,13 @@ function CoffeeForm() {
     setError("");
     setSuccess("");
 
-    // VALIDACIÓN
     if (!name || !origin) {
       setError("Todos los campos son obligatorios");
       return;
     }
 
-    // SIMULACIÓN DE ENVÍO
     setSuccess("Formulario enviado correctamente");
 
-    // reset
     setName("");
     setOrigin("");
   };
@@ -29,41 +26,55 @@ function CoffeeForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-md rounded-xl bg-[#fcedd6] p-6 shadow-md"
+      className="max-w-md rounded-[1.75rem] bg-secondary/40 p-6 shadow-lg shadow-black/5 backdrop-blur"
     >
-      <h2 className="mb-4 text-xl font-bold text-[#7a5447]">
+      <h2 className="mb-5 text-2xl font-semibold text-primary">
         Añadir café
       </h2>
 
+      {/* Nombre */}
       <div className="mb-4">
-        <label className="block text-sm mb-1">Nombre</label>
+        <label className="mb-1 block text-sm font-medium text-primary/80">
+          Nombre
+        </label>
         <input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full rounded-md border px-3 py-2"
+          className="w-full rounded-xl border border-secondary bg-brand-white/80 px-4 py-2 text-primary outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30"
         />
       </div>
 
+      {/* Origen */}
       <div className="mb-4">
-        <label className="block text-sm mb-1">Origen</label>
+        <label className="mb-1 block text-sm font-medium text-primary/80">
+          Origen
+        </label>
         <input
           type="text"
           value={origin}
           onChange={(e) => setOrigin(e.target.value)}
-          className="w-full rounded-md border px-3 py-2"
+          className="w-full rounded-xl border border-secondary bg-brand-white/80 px-4 py-2 text-primary outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30"
         />
       </div>
 
       {/* ERROR */}
-      {error && <p className="mb-3 text-red-500">{error}</p>}
+      {error && (
+        <p className="mb-3 rounded-lg bg-accent/10 px-3 py-2 text-sm text-accent">
+          {error}
+        </p>
+      )}
 
       {/* SUCCESS */}
-      {success && <p className="mb-3 text-green-600">{success}</p>}
+      {success && (
+        <p className="mb-3 rounded-lg bg-secondary px-3 py-2 text-sm text-primary">
+          {success}
+        </p>
+      )}
 
       <button
         type="submit"
-        className="rounded-md bg-[#7a5447] px-4 py-2 text-white hover:bg-[#5c3f35]"
+        className="mt-2 w-full rounded-full bg-accent px-5 py-3 text-sm font-semibold text-brand-white transition hover:bg-primary hover:text-secondary"
       >
         Enviar
       </button>

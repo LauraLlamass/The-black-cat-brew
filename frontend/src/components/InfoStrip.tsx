@@ -5,10 +5,10 @@
 //     <section
 //       className="py-8"
 //       style={{
-//         backgroundImage: `url(${granos})`,
-//         backgroundRepeat: "repeat",
-//         backgroundSize: "280px",
-//         backgroundPosition: "center",
+//         secondaryImage: `url(${granos})`,
+//         secondaryRepeat: "repeat",
+//         secondarySize: "280px",
+//         secondaryPosition: "center",
 //       }}
 //     >      
 //     </section>
