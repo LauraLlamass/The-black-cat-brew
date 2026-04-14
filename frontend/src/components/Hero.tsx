@@ -11,7 +11,7 @@ function Hero() {
           </p>
 
           <h1 className="max-w-md text-5xl font-black leading-tight text-[#7a5447] md:text-6xl">
-            Sweet coffee moments start here
+            Club del café
           </h1>
 
           <p className="mt-5 max-w-md text-base leading-8 text-[#7a5447]">
@@ -21,15 +21,15 @@ function Hero() {
 
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-  to="/catalogo"
-  className="rounded-full bg-[#7a5447] px-6 py-3 text-sm font-semibold text-[#ffffff] transition hover:bg-[#daa77a] hover:text-[#7a5447]"
->
-  Ver catálogo
-</Link>
+              to="/catalogo"
+              className="rounded-full bg-[#7a5447] px-6 py-3 text-sm font-semibold text-[#ffffff] transition hover:bg-[#daa77a] hover:text-[#7a5447]"
+            >
+              Ver catálogo
+            </Link>
 
             <Link
               to="/favorites"
-              className="rounded-full border border-[#7a5447] px-6 py-3 text-sm font-semibold text-[#7a5447] transition hover:bg-[#7a5447] hover:text-[#ffffff]"
+              className="rounded-full border border-[#7a5447] px-6 py-3 text-sm font-semibold text-[#7a5447] transition hover:bg-[#daa77a] hover:text-[#7a5447]"
             >
               Ir a favoritos
             </Link>

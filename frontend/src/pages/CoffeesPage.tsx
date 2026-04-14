@@ -16,7 +16,6 @@ function CoffeesPage() {
       id="catalogo"
       className="py-14"
       style={{
-        backgroundColor: "#eeefed",
         backgroundImage: `url(${granos})`,
         backgroundRepeat: "repeat",
         backgroundSize: "180px",
@@ -25,7 +24,6 @@ function CoffeesPage() {
     >
       <div className="mx-auto max-w-7xl px-6 text-[#7a5447]">
         <SectionHeading
-          eyebrow="Catálogo"
           title="Descubre nuestros cafés"
           description="Una selección pensada para explorar distintos perfiles de sabor, orígenes y estilos de café."
         />

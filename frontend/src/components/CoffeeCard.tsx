@@ -6,8 +6,16 @@ interface Props {
 }
 
 function CoffeeCard({ coffee }: Props) {
-  const { addFavorite } = useFavorites();
+  const { addFavorite, removeFavorite, isFavorite } = useFavorites();
+ const favorite = isFavorite(coffee.id);
 
+  const handleFavoriteClick = () => {
+    if (favorite) {
+      removeFavorite(coffee.id);
+    } else {
+      addFavorite(coffee);
+    }
+  };
   return (
     <article className="overflow-hidden rounded-[2rem] bg-[#7a5447] p-3 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
       <div className="overflow-hidden rounded-[1.5rem] bg-[#ffffff]">
@@ -31,6 +39,7 @@ function CoffeeCard({ coffee }: Props) {
           <span className="rounded-full border border-[#daa77a] bg-[#ffffff] px-3 py-1 text-[#7a5447]">
             {coffee.intensity}
           </span>
+
           <span className="rounded-full border border-[#daa77a] bg-[#ffffff] px-3 py-1 text-[#7a5447]">
             {coffee.acidity}
           </span>
@@ -50,11 +59,15 @@ function CoffeeCard({ coffee }: Props) {
             Ver en Amazon
           </a>
 
-          <button
-            onClick={() => addFavorite(coffee)}
-            className="inline-flex items-center justify-center rounded-full bg-[#7c895e] px-5 py-3 text-sm font-semibold text-[#ffffff] transition hover:bg-[#daa77a] hover:text-[#7a5447]"
+           <button
+            onClick={handleFavoriteClick}
+            className={`inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition hover:bg-[#daa77a] hover:text-[#7a5447] ${
+              favorite
+                ? "bg-[#ffffff] text-[#7c895e]"
+                : "bg-[#7c895e] text-[#ffffff]"
+            }`}
           >
-            Añadir a favoritos
+            {favorite ? "Añadido" : "Añadir a favoritos"}
           </button>
         </div>
       </div>

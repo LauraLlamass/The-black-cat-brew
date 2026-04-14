@@ -1,4 +1,4 @@
-import { coffees } from "../data/coffees";
+import { coffees } from "../data/coffee";
 
 export function getAllCoffees() {
   return coffees;

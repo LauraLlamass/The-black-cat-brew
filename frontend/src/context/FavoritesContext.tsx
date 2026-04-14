@@ -5,6 +5,7 @@ interface FavoritesContextType {
   favorites: Coffee[];
   addFavorite: (coffee: Coffee) => void;
   removeFavorite: (id: string) => void;
+  isFavorite: (id: string) => boolean;
 }
 
 const FavoritesContext = createContext<FavoritesContextType | undefined>(undefined);
@@ -24,8 +25,15 @@ export function FavoritesProvider({ children }: { children: React.ReactNode }) {
     setFavorites((prev) => prev.filter((coffee) => coffee.id !== id));
   }, []);
 
+  const isFavorite = useCallback(
+    (id: string) => favorites.some((coffee) => coffee.id === id),
+    [favorites]
+  );
+
   return (
-    <FavoritesContext.Provider value={{ favorites, addFavorite, removeFavorite }}>
+    <FavoritesContext.Provider
+      value={{ favorites, addFavorite, removeFavorite, isFavorite }}
+    >
       {children}
     </FavoritesContext.Provider>
   );

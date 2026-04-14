@@ -31,6 +31,14 @@ function Navbar() {
           >
             Favoritos
           </Link>
+
+          <Link
+            to="/about"
+            className="text-sm font-medium text-[#7a5447] transition hover:text-[#daa77a]"
+          >
+            Sobre nosotros
+          </Link>
+
         </nav>
 
         <div className="flex items-center gap-3">
