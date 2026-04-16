@@ -3,15 +3,7 @@ import granos from "../assets/fondoGranos.png";
 
 function AboutPage() {
   return (
-    <section
-      className="bg-secondary py-14"
-      style={{
-        backgroundImage: `url(${granos})`,
-        backgroundRepeat: "repeat",
-        backgroundSize: "180px",
-        backgroundPosition: "center",
-      }}
-    >
+    <section>
       <div className="mx-auto max-w-7xl px-6 text-primary">
         <div className="mb-10 rounded-[2rem] border border-secondary/40 bg-secondary p-8 shadow-lg shadow-black/10">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-accent">

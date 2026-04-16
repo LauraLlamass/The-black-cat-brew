@@ -3,7 +3,7 @@ import enProceso from "../assets/enProceso.png";
 
 function Hero() {
   return (
-    <section className="bg-secondary pt-12">
+    <section className="pt-12">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-2 md:items-center">
         <div className="pb-10 md:pb-16">
           <p className="mb-3 text-xs uppercase tracking-[0.3em] text-accent">
@@ -50,7 +50,6 @@ function Hero() {
         </div>
       </div>
 
-      <div className="mt-6 h-12 rounded-t-[2rem] bg-secondary" />
     </section>
   );
 }

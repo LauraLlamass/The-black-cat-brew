@@ -4,7 +4,7 @@ import granos from "../assets/fondoGranos.png";
 function NotFoundPage() {
   return (
     <main
-      className="flex min-h-[80vh] items-center justify-center bg-secondary px-6 text-center"
+      className="flex min-h-[80vh] items-center justify-center bg-brand-white px-6 text-center"
       style={{
         backgroundImage: `url(${granos})`,
         backgroundRepeat: "repeat",

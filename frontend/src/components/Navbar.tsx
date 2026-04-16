@@ -16,14 +16,14 @@ function Navbar() {
         <nav className="hidden items-center gap-8 md:flex">
           <Link
             to="/"
-            className="rounded-full border border-secondary/40 px-5 py-2 text-sm font-medium text-secondary transition hover:text-accent"
+            className="rounded-full border border-secondary px-5 py-2 text-sm font-medium text-secondary transition hover:text-accent"
           >
             Inicio
           </Link>
 
           <Link
             to="/catalogo"
-            className="rounded-full border border-secondary/40 px-5 py-2 text-sm font-medium text-secondary transition hover:text-accent"
+            className="rounded-full border border-secondary px-5 py-2 text-sm font-medium text-secondary transition hover:text-accent"
           >
             Cafés
           </Link>
@@ -31,7 +31,7 @@ function Navbar() {
 
           <Link
             to="/about"
-            className="rounded-full border border-secondary/40 px-5 py-2 text-sm font-medium text-secondary transition hover:text-accent"
+            className="rounded-full border border-secondary px-5 py-2 text-sm font-medium text-secondary transition hover:text-accent"
           >
             Sobre nosotros
           </Link>

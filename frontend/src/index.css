@@ -3,10 +3,8 @@
 @theme {
   --color-primary: #161716;
   --color-secondary: #f6f1e7;
-  --color-accent: #b87400;
-  --color-brand-white: #ffffff;
-  --color-surface: #fffdf8;
-  --color-text-muted: #5f5648;
+  --color-accent: #efb965;
+  --color-brand-white: #fffdf8;
 }
 
 body {
@@ -14,3 +12,4 @@ body {
   background-color: var(--color-background);
   color: var(--color-primary);
 }
+

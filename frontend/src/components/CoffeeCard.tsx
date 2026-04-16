@@ -3,9 +3,10 @@ import { useFavorites } from "../context/FavoritesContext";
 
 interface Props {
   coffee: Coffee;
+  favView?: boolean;
 }
 
-function CoffeeCard({ coffee }: Props) {
+function CoffeeCard({ coffee, favView = false }: Props) {
   const { addFavorite, removeFavorite, isFavorite } = useFavorites();
   const favorite = isFavorite(coffee.id);
 
@@ -20,7 +21,7 @@ function CoffeeCard({ coffee }: Props) {
   return (
     <article className="overflow-hidden rounded-[2rem] bg-secondary p-3 shadow-md shadow-black/10 transition hover:-translate-y-1 hover:shadow-xl">
       {/* Imagen */}
-      <div className="overflow-hidden rounded-[1.5rem] bg-primary/80">
+      <div className="overflow-hidden rounded-[1.5rem] bg-primary">
         <img
           src={coffee.image}
           alt={coffee.name}
@@ -55,25 +56,35 @@ function CoffeeCard({ coffee }: Props) {
 
         {/* Botones */}
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+
           <a
             href={coffee.amazonUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-semibold text-brand-white transition hover:bg-primary hover:text-secondary"
+            className="inline-flex items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-semibold text-primary transition hover:bg-primary hover:text-secondary"
           >
             Ver en Amazon
           </a>
 
-          <button
-            onClick={handleFavoriteClick}
-            className={`inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition ${
-              favorite
-                ? "bg-secondary text-accent"
-                : "bg-accent text-brand-white hover:bg-primary"
-            }`}
-          >
-            {favorite ? "Añadido" : "Añadir a favoritos"}
-          </button>
+          {!favView
+            ? <button
+              onClick={handleFavoriteClick}
+              className={`inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition ${favorite
+                ? "bg-primary text-secondary hover:bg-accent"
+                : "bg-accent text-primary hover:text-secondary hover:bg-primary"}`}
+            >
+              {favorite ? "Añadido" : "Añadir a favoritos"}
+            </button>
+            :
+            <button
+              onClick={() => removeFavorite(coffee.id)}
+              className="inline-flex items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-semibold text-primary transition hover:bg-primary hover:text-secondary"
+            >
+              Quitar 
+            </button>
+          }
+
+
         </div>
       </div>
     </article>

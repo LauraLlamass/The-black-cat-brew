@@ -12,16 +12,7 @@ function CoffeesPage() {
   }, [coffees]);
 
   return (
-    <section
-      id="catalogo"
-      className="bg-secondary py-14"
-      style={{
-        backgroundImage: `url(${granos})`,
-        backgroundRepeat: "repeat",
-        backgroundSize: "180px",
-        backgroundPosition: "center",
-      }}
-    >
+    <section>
       <div className="mx-auto max-w-7xl px-6 text-primary">
         <SectionHeading
           title="Descubre nuestros cafés"

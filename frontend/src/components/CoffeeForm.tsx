@@ -26,7 +26,7 @@ function CoffeeForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-md rounded-[1.75rem] bg-secondary/40 p-6 shadow-lg shadow-black/5 backdrop-blur"
+      className="max-w-md rounded-[1.75rem]  p-6 shadow-lg shadow-black/5 backdrop-blur"
     >
       <h2 className="mb-5 text-2xl font-semibold text-primary">
         Añadir café

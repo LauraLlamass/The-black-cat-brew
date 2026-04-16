@@ -6,13 +6,19 @@ import FavoritesPage from "./pages/FavoritesPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import HomePage from "./pages/HomePages";
 import AboutPage from "./pages/AboutPage";
+import granos from "./assets/fondoGranos.png";
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#eeefed] text-[#7a5447]">
+    <div className="min-h-screen text-primary  py-14 " >
       <Navbar />
-
-      <Routes>
+<div className="min-h-screen bg-brand-white text-primary  py-14 " style={{
+        backgroundImage: `url(${granos})`,
+        backgroundRepeat: "repeat",
+        backgroundSize: "180px",
+        backgroundPosition: "center",
+      }}>
+    <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/catalogo" element={<CoffeesPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
@@ -20,6 +26,8 @@ function App() {
         <Route path="*" element={<NotFoundPage />} />
         
       </Routes>
+
+</div>
 
       <Footer />
     </div>
