@@ -5,17 +5,11 @@ interface SectionHeadingProps {
 }
 
 function SectionHeading({
-  eyebrow,
   title,
   description,
 }: SectionHeadingProps) {
   return (
-    <div className="mb-10">
-      {eyebrow ? (
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-accent">
-          {eyebrow}
-        </p>
-      ) : null}
+    <div className="mt-5 max-w-md text-base leading-8 text-primary bg-brand-white p-4 rounded-xl">
 
       <h2 className="text-3xl font-semibold text-primary md:text-4xl">
         {title}

@@ -10,24 +10,26 @@ import granos from "./assets/fondoGranos.png";
 
 function App() {
   return (
-    <div className="min-h-screen text-primary  py-14 " >
+    <div className="min-h-screen flex flex-col text-primary">
       <Navbar />
-<div className="min-h-screen bg-brand-white text-primary  py-14 " style={{
-        backgroundImage: `url(${granos})`,
-        backgroundRepeat: "repeat",
-        backgroundSize: "180px",
-        backgroundPosition: "center",
-      }}>
-    <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/catalogo" element={<CoffeesPage />} />
-        <Route path="/favorites" element={<FavoritesPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-        
-      </Routes>
 
-</div>
+      <main
+        className="flex-1 bg-brand-white pt-24 pb-24"
+        style={{
+          backgroundImage: `url(${granos})`,
+          backgroundRepeat: "repeat",
+          backgroundSize: "180px",
+          backgroundPosition: "center",
+        }}
+      >
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalogo" element={<CoffeesPage />} />
+          <Route path="/favorites" element={<FavoritesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </main>
 
       <Footer />
     </div>

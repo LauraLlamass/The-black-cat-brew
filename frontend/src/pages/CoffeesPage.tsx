@@ -1,7 +1,6 @@
 import { useMemo } from "react";
 import CoffeeCard from "../components/CoffeeCard";
 import SectionHeading from "../components/SectionHeading";
-import granos from "../assets/fondoGranos.png";
 import { useCoffees } from "../hooks/useCoffees";
 
 function CoffeesPage() {
@@ -15,7 +14,7 @@ function CoffeesPage() {
     <section>
       <div className="mx-auto max-w-7xl px-6 text-primary">
         <SectionHeading
-          title="Descubre nuestros cafés"
+                  title="Descubre nuestros cafés"
           description="Una selección pensada para explorar distintos perfiles de sabor, orígenes y estilos de café."
         />
 

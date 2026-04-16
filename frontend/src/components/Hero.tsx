@@ -14,7 +14,7 @@ function Hero() {
             The Black Cat Brew
           </h1>
 
-          <p className="mt-5 max-w-md text-base leading-8 text-primary/80">
+          <p className="mt-5 max-w-md text-base leading-8 text-primary bg-brand-white p-4 rounded-xl">
             Explora cafés con personalidad, descubre perfiles de sabor y guarda
             tus favoritos en una colección visual con estilo propio.
           </p>
@@ -22,14 +22,14 @@ function Hero() {
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               to="/catalogo"
-              className="rounded-full border border-primary px-6 py-3 text-sm font-semibold text-primary transition hover:bg-secondary hover:text-accent"
+              className="rounded-full border border-primary px-6 py-3 text-sm font-semibold text-primary bg-brand-white transition hover:bg-accent hover:text-secondary"
             >
               Ver cafés
             </Link>
 
             <Link
               to="/favorites"
-              className="rounded-full border border-primary px-6 py-3 text-sm font-semibold text-primary transition hover:bg-secondary hover:text-accent"
+              className="rounded-full border border-primary px-6 py-3 text-sm font-semibold text-primary bg-brand-white transition hover:bg-accent hover:text-secondary"
             >
               Ir a favoritos
             </Link>
