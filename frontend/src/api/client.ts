@@ -1,7 +1,7 @@
 import type { Coffee } from "../types/coffee.js";
 
 export async function getCoffees(): Promise<Coffee[]> {
-  const response = await fetch("http://localhost:3000/api/v1/coffees");
+  const response = await fetch("https://the-black-cat-brew.onrender.com");
 
   if (!response.ok) {
     throw new Error("Error fetching coffees");
