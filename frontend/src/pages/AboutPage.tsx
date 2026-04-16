@@ -1,5 +1,4 @@
 import enProceso from "../assets/enProceso.png";
-import granos from "../assets/fondoGranos.png";
 
 function AboutPage() {
   return (

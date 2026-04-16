@@ -1,6 +1,5 @@
 import { useFavorites } from "../context/FavoritesContext";
 import SectionHeading from "../components/SectionHeading";
-import granos from "../assets/fondoGranos.png";
 import CoffeeCard from "../components/CoffeeCard";
 
 function FavoritesPage() {
