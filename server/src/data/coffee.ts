@@ -36,7 +36,7 @@ export const coffees = [
     intensity: "Desconocido",
     acidity: "Desconocido",
     description: "Caracterizado por su intensidad, gran cuerpo y explosión frutal",
-    image: "https://the-black-cat-brew.onrender.com/images/kenia.png",
+    image: "https://the-black-cat-brew.onrender.com/images/kenya.png",
     amazonUrl: "https://amazon.com",
   },
   {
