@@ -21,7 +21,7 @@ function CoffeeCard({ coffee, favView = false }: Props) {
   return (
     <article className="overflow-hidden rounded-2xl bg-secondary p-3 shadow-md shadow-black/10 transition hover:-translate-y-1 hover:shadow-xl">
       {/* Imagen */}
-      <div className="overflow-hidden rounded-full bg-primary">
+      <div className="overflow-hidden rounded-xl bg-primary">
         <img
           src={coffee.image}
           alt={coffee.name}
