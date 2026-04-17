@@ -13,7 +13,7 @@ function FavoritesPage() {
         />
 
         {favorites.length === 0 ? (
-          <div className="rounded-[2rem] border border-secondary/40 bg-secondary p-10 text-center shadow-lg shadow-black/10">
+          <div className="rounded-2xl border border-secondary/40 bg-secondary p-10 text-center shadow-lg shadow-black/10">
             <p className="text-lg font-medium text-primary">
               Todavía no has añadido favoritos.
             </p>

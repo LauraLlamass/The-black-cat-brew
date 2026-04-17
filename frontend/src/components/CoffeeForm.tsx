@@ -74,7 +74,7 @@ function CoffeeForm() {
 
       <button
         type="submit"
-        className="mt-2 w-full rounded-full bg-accent px-5 py-3 text-sm font-semibold text-brand-white transition hover:bg-primary hover:text-secondary"
+        className="mt-2 w-full rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-brand-white transition hover:bg-primary hover:text-secondary"
       >
         Enviar
       </button>

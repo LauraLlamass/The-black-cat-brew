@@ -12,7 +12,7 @@ function NotFoundPage() {
         backgroundPosition: "center",
       }}
     >
-      <div className="max-w-md rounded-[2rem] border border-secondary/40 bg-secondary p-10 shadow-xl shadow-black/10">
+      <div className="max-w-md rounded-2xl border border-secondary/40 bg-secondary p-10 shadow-xl shadow-black/10">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">
           Error
         </p>
@@ -25,7 +25,7 @@ function NotFoundPage() {
 
         <Link
           to="/"
-          className="mt-8 inline-flex items-center justify-center rounded-full bg-secondary px-6 py-3 text-sm font-semibold text-brand-white transition hover:bg-primary hover:text-secondary"
+          className="mt-8 inline-flex items-center justify-center rounded-xl bg-secondary px-6 py-3 text-sm font-semibold text-brand-white transition hover:bg-primary hover:text-secondary"
         >
           Volver al catálogo
         </Link>

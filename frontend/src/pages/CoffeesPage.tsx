@@ -19,11 +19,11 @@ function CoffeesPage() {
         />
 
         {loading ? (
-          <div className="mt-10 rounded-[1.5rem] bg-secondary p-6 text-center text-primary shadow-md">
+          <div className="mt-10 rounded-xl bg-secondary p-6 text-center text-primary shadow-md">
             Cargando cafés...
           </div>
         ) : error ? (
-          <div className="mt-10 rounded-[1.5rem] bg-accent/10 p-6 text-center text-accent">
+          <div className="mt-10 rounded-xl bg-accent/10 p-6 text-center text-accent">
             {error}
           </div>
         ) : (
