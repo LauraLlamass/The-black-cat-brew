@@ -1,4 +1,6 @@
 
+// cuando se cambien las imagenes debe ser asi: image: "https://the-black-cat-brew.onrender.com/images/cafeItaliana.png"
+
 
 export const coffees = [
   {
