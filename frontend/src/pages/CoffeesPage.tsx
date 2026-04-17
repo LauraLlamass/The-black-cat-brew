@@ -14,7 +14,7 @@ function CoffeesPage() {
     <section>
       <div className="mx-auto max-w-7xl px-6 text-primary">
         <SectionHeading
-                  title="Descubre nuestros cafés"
+          title="Descubre nuestros cafés"
           description="Una selección pensada para explorar distintos perfiles de sabor, orígenes y estilos de café."
         />
 
