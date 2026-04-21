@@ -9,7 +9,9 @@ const PORT = process.env.PORT || 3000;
 app.use(cors({
   origin: [
     "https://the-black-cat-brew.vercel.app",
-    "http://localhost:3000"
+    "http://localhost:3000",
+    "http://localhost:5173"
+
   ]
 }));
 
