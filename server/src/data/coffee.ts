@@ -1,5 +1,4 @@
 
-// cuando se cambien las imagenes debe ser asi: image: "https://the-black-cat-brew.onrender.com/images/cafeItaliana.png"
 
 
 export const coffees = [
@@ -9,7 +8,7 @@ export const coffees = [
     intensity: "Desconocido",
     acidity: "Desconocido",
     description: "notas de frutos secos y chocolate",
-    image: "https://the-black-cat-brew.onrender.com/images/brasil.png",
+    image: "/images/brasil.png",
     amazonUrl: "https://amazon.com",
   },
   {
@@ -18,7 +17,7 @@ export const coffees = [
     intensity: "Desconocido",
     acidity: "Desconocido",
     description: "Desconocido",
-    image: "https://the-black-cat-brew.onrender.com/images/colombia.png",
+    image: "/images/colombia.png",
     amazonUrl: "https://amazon.com",
   },
   {
@@ -27,7 +26,7 @@ export const coffees = [
     intensity: "Desconocido",
     acidity: "Desconocido",
     description: "Caracterizado por su intensidad, con notas florales y cítricas muy marcadas",
-    image: "https://the-black-cat-brew.onrender.com/images/etiopia.png",
+    image: "/images/etiopia.png",
     amazonUrl: "https://amazon.com",
   },
   {
@@ -36,7 +35,7 @@ export const coffees = [
     intensity: "Desconocido",
     acidity: "Desconocido",
     description: "Caracterizado por su intensidad, gran cuerpo y explosión frutal",
-    image: "https://the-black-cat-brew.onrender.com/images/kenya.png",
+    image: "/images/kenya.png",
     amazonUrl: "https://amazon.com",
   },
   {
@@ -45,7 +44,7 @@ export const coffees = [
     intensity: "Desconocido",
     acidity: "Desconocido",
     description: "Famoso por su carácter, aroma ahumado y notas achocolatadas",
-    image: "https://the-black-cat-brew.onrender.com/images/guatemala.png",
+    image: "/images/guatemala.png",
     amazonUrl: "https://amazon.com",
   },
   {
@@ -54,7 +53,7 @@ export const coffees = [
     intensity: "Desconocido",
     acidity: "Desconocido",
     description: "Dulce tropical con mucho cuerpo y notas afrutadas",
-    image: "https://the-black-cat-brew.onrender.com/images/costaRica.png",
+    image: "/images/costaRica.png",
     amazonUrl: "https://amazon.com",
   },
   {
@@ -63,7 +62,7 @@ export const coffees = [
     intensity: "Desconocido",
     acidity: "Desconocido",
     description: "Conocido por su sabor complejo y delicado con notas de jazmín",
-    image: "https://the-black-cat-brew.onrender.com/images/panama.png",
+    image: "/images/panama.png",
     amazonUrl: "https://amazon.com",
   },
   {
@@ -72,7 +71,7 @@ export const coffees = [
     intensity: "Desconocido",
     acidity: "Desconocido",
     description: "Gran cuerpo con baja acidez y perfil herbáceo o terroso",
-    image: "https://the-black-cat-brew.onrender.com/images/java.png",
+    image: "/images/java.png",
     amazonUrl: "https://amazon.com",
   },
   {
@@ -81,7 +80,7 @@ export const coffees = [
     intensity: "Desconocido",
     acidity: "Desconocido",
     description: "Cultivado bajo sombra ofrece un perfil más espciado y enérgico",
-    image: "https://the-black-cat-brew.onrender.com/images/india.png",
+    image: "/images/india.png",
     amazonUrl: "https://amazon.com",
   },
 ];
