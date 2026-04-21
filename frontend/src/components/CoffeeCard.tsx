@@ -9,7 +9,7 @@ interface Props {
 function CoffeeCard({ coffee, favView = false }: Props) {
   const { addFavorite, removeFavorite, isFavorite } = useFavorites();
   const favorite = isFavorite(coffee.id);
-
+const apiUrl = 'https://the-black-cat-brew.onrender.com';
   const handleFavoriteClick = () => {
     if (favorite) {
       removeFavorite(coffee.id);
@@ -23,7 +23,7 @@ function CoffeeCard({ coffee, favView = false }: Props) {
       {/* Imagen */}
       <div className="overflow-hidden rounded-xl bg-primary">
         <img
-          src={coffee.image}
+          src={`${apiUrl}${coffee.image}`}
           alt={coffee.name}
           className="h-48 w-full object-contain p-4 transition duration-300 hover:scale-105"
         />
