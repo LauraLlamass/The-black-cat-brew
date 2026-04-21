@@ -9,7 +9,7 @@ interface Props {
 function CoffeeCard({ coffee, favView = false }: Props) {
   const { addFavorite, removeFavorite, isFavorite } = useFavorites();
   const favorite = isFavorite(coffee.id);
-const apiUrl = 'https://the-black-cat-brew.onrender.com';
+  const apiUrl = 'https://the-black-cat-brew.onrender.com';
   const handleFavoriteClick = () => {
     if (favorite) {
       removeFavorite(coffee.id);
