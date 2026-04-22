@@ -14,10 +14,10 @@ function AboutPage() {
           </h1>
 
           <p className="mt-5 max-w-4xl text-lg leading-8 text-primary/80">
-            The Black Cat Brew es una aplicación inspirada en el mundo del café.
+            <strong>The Black Cat Brew</strong> es una aplicación inspirada en el mundo del <strong>café</strong>.
             El objetivo del proyecto es ofrecer una experiencia visual donde el
-            usuario pueda descubrir distintos cafés, conocer su origen y guardar
-            sus favoritos.
+            usuario pueda <strong>descubrir</strong> distintos cafés, conocer su <strong>origen</strong> y guardar
+            sus <strong>favoritos</strong>.
           </p>
         </div>
 
@@ -33,15 +33,14 @@ function AboutPage() {
 
             <p className="text-lg leading-8 text-primary/80">
               El proyecto nace como una guía visual para descubrir cafés,
-              explorar perfiles de sabor y crear una pequeña colección personal
+              explorar perfiles de sabor y crear una pequeña <strong>colección personal </strong>
               de favoritos. La intención no es simular una tienda real, sino una
               experiencia informativa con identidad propia.
             </p>
 
             <p className="mt-5 text-lg leading-8 text-primary/80">
               A nivel visual, se ha trabajado con ilustraciones, colores suaves
-              y una composición inspirada en branding de cafeterías y productos
-              creativos.
+              y una composición inspirada en <strong>branding de cafeterías</strong> y <strong>productos creativos</strong>.
             </p>
           </div>
 
@@ -60,7 +59,7 @@ function AboutPage() {
               Identidad visual
             </h3>
             <p className="mt-3 text-[15px] leading-7 text-primary/80">
-              El proyecto utiliza ilustraciones propias y una paleta cálida para
+              El proyecto utiliza <strong>ilustraciones propias</strong> y una <strong>paleta cálida</strong> para
               dar una personalidad visual cercana, cuidada y coherente dentro de
               la aplicación.
             </p>
@@ -71,9 +70,8 @@ function AboutPage() {
               Catálogo informativo
             </h3>
             <p className="mt-3 text-[15px] leading-7 text-primary/80">
-              Los cafés se presentan como fichas visuales con información sobre
-              origen, intensidad, acidez y acceso a enlaces externos para seguir
-              explorando.
+              Los cafés se presentan como <strong>fichas visuales</strong> con información sobre
+              origen, intensidad y acidez.
             </p>
           </article>
 
@@ -83,7 +81,7 @@ function AboutPage() {
             </h3>
             <p className="mt-3 text-[15px] leading-7 text-primary/80">
               El usuario puede guardar sus cafés favoritos para crear una
-              selección personal y disfrutar de una experiencia más cercana
+              selección personal y disfrutar de una <strong>experiencia más cercana </strong>
               dentro de la aplicación.
             </p>
           </article>

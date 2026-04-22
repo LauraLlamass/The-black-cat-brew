@@ -33,13 +33,11 @@ function Hero() {
         </div>
 
         <div className="relative">
-          <div className="absolute -left-6 top-10 h-32 w-32 rounded-full bg-secondary blur-2xl" />
-
           <div className="overflow-hidden rounded-[2.5rem] bg-secondary shadow-xl shadow-black/10">
             <img
               src={enProceso}
               alt="Imagen principal de The Black Cat Brew"
-              className="h-[420px] w-full object-cover transition duration-500 hover:scale-105"
+              className="h-[420px] w-full object-cover"
             />
           </div>
         </div>
