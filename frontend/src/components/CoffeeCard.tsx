@@ -9,7 +9,8 @@ interface Props {
 function CoffeeCard({ coffee, favView = false }: Props) {
   const { addFavorite, removeFavorite, isFavorite } = useFavorites();
   const favorite = isFavorite(coffee.id);
-  const apiUrl = 'https://the-black-cat-brew.onrender.com';
+  const apiUrl = "https://the-black-cat-brew.onrender.com";
+
   const handleFavoriteClick = () => {
     if (favorite) {
       removeFavorite(coffee.id);
@@ -19,8 +20,44 @@ function CoffeeCard({ coffee, favView = false }: Props) {
   };
 
   return (
-    <article className="overflow-hidden rounded-2xl bg-secondary p-3 shadow-md shadow-black/10 transition hover:-translate-y-1 hover:shadow-xl">
-      {/* Imagen */}
+    <article className="relative overflow-hidden rounded-2xl bg-secondary p-3 shadow-md shadow-black/10 transition hover:-translate-y-1 hover:shadow-xl">
+      {/* Botón favorito arriba derecha */}
+      {!favView ? (
+        <button
+          onClick={handleFavoriteClick}
+          aria-label={favorite ? "Quitar de favoritos" : "Añadir a favoritos"}
+          className={`absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full border transition ${
+            favorite
+              ? "border-accent bg-accent text-primary"
+              : "border-secondary bg-primary text-brand-white hover:border-accent hover:bg-accent hover:text-brand-white"
+          }`}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill={favorite ? "currentColor" : "none"} viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6"
+          >
+            <path
+              strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
+            />
+          </svg>
+        </button>
+      ) : (
+        <button
+          onClick={() => removeFavorite(coffee.id)}
+          aria-label="Quitar de favoritos"
+          className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-accent bg-accent text-primary transition hover:border-accent hover:bg-primary hover:text-accent"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6"
+          >
+            <path
+              strokeLinecap="round"  strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
+            />
+          </svg>
+        </button>
+      )}
+
+      {/* Imagen Mapa Gato*/}
       <div className="overflow-hidden rounded-xl bg-primary">
         <img
           src={`${apiUrl}${coffee.image}`}
@@ -53,30 +90,6 @@ function CoffeeCard({ coffee, favView = false }: Props) {
         <p className="mt-4 text-sm leading-7 text-primary">
           {coffee.description}
         </p>
-
-        {/* Botones */}
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-
-          {!favView
-            ? <button
-              onClick={handleFavoriteClick}
-              className={`inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition ${favorite
-                ? "bg-primary text-secondary hover:bg-accent"
-                : "bg-accent text-primary hover:text-secondary hover:bg-primary"}`}
-            >
-              {favorite ? "Añadido" : "Añadir a favoritos"}
-            </button>
-            :
-            <button
-              onClick={() => removeFavorite(coffee.id)}
-              className="inline-flex items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-semibold text-primary transition hover:bg-primary hover:text-secondary"
-            >
-              Quitar
-            </button>
-          }
-
-
-        </div>
       </div>
     </article>
   );

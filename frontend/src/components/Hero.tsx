@@ -12,8 +12,7 @@ function Hero() {
           </h1>
 
           <p className="mt-5 max-w-md text-base leading-8 text-primary bg-brand-white p-4 rounded-full">
-            Explora cafés con personalidad, descubre perfiles de sabor y guarda tus favoritos en una colección visual con estilo propio.
-          </p>
+            Descubre cafés únicos, compara perfiles de sabor y guarda tus favoritos en un solo lugar.          </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
