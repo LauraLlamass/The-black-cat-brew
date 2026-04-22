@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import enProceso from "../assets/enProceso.png";
 
 function Hero() {
@@ -13,30 +12,14 @@ function Hero() {
 
           <p className="mt-5 max-w-md text-base leading-8 text-primary bg-brand-white p-4 rounded-full">
             Descubre cafés únicos, compara perfiles de sabor y guarda tus favoritos en un solo lugar.          </p>
-
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              to="/catalogo"
-              className="rounded-full border border-primary px-6 py-3 text-sm font-semibold text-primary bg-brand-white transition hover:bg-accent hover:text-secondary"
-            >
-              Ver cafés
-            </Link>
-
-            <Link
-              to="/favorites"
-              className="rounded-full border border-primary px-6 py-3 text-sm font-semibold text-primary bg-brand-white transition hover:bg-accent hover:text-secondary"
-            >
-              Ir a favoritos
-            </Link>
-          </div>
         </div>
 
         <div className="relative">
-          <div className="overflow-hidden rounded-[2.5rem] bg-secondary shadow-xl shadow-black/10">
+          <div className="overflow-hidden rounded-[1.5rem] ">
             <img
               src={enProceso}
               alt="Imagen principal de The Black Cat Brew"
-              className="h-[420px] w-full object-cover"
+              className="h-[360px] w-full object-cover"
             />
           </div>
         </div>
@@ -45,5 +28,6 @@ function Hero() {
     </section>
   );
 }
+
 
 export default Hero;
