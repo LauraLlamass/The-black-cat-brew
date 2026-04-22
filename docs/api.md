@@ -36,7 +36,6 @@ GET /api/v1/coffees
     "notes": ["fruity", "citrus"],
     "description": "Smooth coffee with fruity notes.",
     "image": "http://localhost:3000/images/cafe.png",
-    "amazonUrl": "https://amazon.com"
   }
 ]
 ```
@@ -62,7 +61,6 @@ GET /api/v1/coffees/1
   "notes": ["fruity", "citrus"],
   "description": "Smooth coffee with fruity notes.",
   "image": "http://localhost:3000/images/cafe.png",
-  "amazonUrl": "https://amazon.com"
 }
 ```
 #### Response si no existe
@@ -92,7 +90,6 @@ Content-Type: application/json
   "notes": ["cocoa"],
   "description": "Coffee created for testing.",
   "image": "http://localhost:3000/images/cafe.png",
-  "amazonUrl": "https://amazon.com"
 }
 ```
 #### Response correcta
@@ -108,7 +105,6 @@ Content-Type: application/json
   "notes": ["cocoa"],
   "description": "Coffee created for testing.",
   "image": "http://localhost:3000/images/cafe.png",
-  "amazonUrl": "https://amazon.com"
 }
 ```
 #### Response si faltan campos
@@ -149,7 +145,6 @@ Content-Type: application/json
   "notes": ["fruity", "citrus"],
   "description": "Updated description",
   "image": "http://localhost:3000/images/cafe.png",
-  "amazonUrl": "https://amazon.com"
 }
 ```
 #### Response si no existe
@@ -193,7 +188,6 @@ DELETE /api/v1/coffees/1
     "notes": ["fruity", "citrus"],
     "description": "Smooth coffee with fruity notes.",
     "image": "http://localhost:3000/images/cafe.png",
-    "amazonUrl": "https://amazon.com"
   }
 }
 ```

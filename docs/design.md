@@ -114,7 +114,6 @@ interface Coffee {
   notes: string[];
   description: string;
   image: string;
-  amazonUrl: string;
 }
 ```
 Esto permite mantener alineados el backend y el frontend mediante TypeScript.
@@ -195,7 +194,6 @@ export interface Coffee {
   notes: string[];
   description: string;
   image: string;
-  amazonUrl: string;
 }
 
 ## Estados de red

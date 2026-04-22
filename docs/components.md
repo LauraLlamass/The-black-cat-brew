@@ -10,7 +10,6 @@ Componente reutilizable que muestra la información de un café.
 ### Funcionalidad
 - Muestra nombre, origen, descripción e imagen
 - Permite añadir el café a favoritos mediante un botón
-- Incluye enlace externo a Amazon
 
 ### Estilos
 - Diseñado con Tailwind CSS

@@ -57,15 +57,6 @@ function CoffeeCard({ coffee, favView = false }: Props) {
         {/* Botones */}
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
 
-          <a
-            href={coffee.amazonUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-semibold text-primary transition hover:bg-primary hover:text-secondary"
-          >
-            Ver en Amazon
-          </a>
-
           {!favView
             ? <button
               onClick={handleFavoriteClick}
@@ -80,7 +71,7 @@ function CoffeeCard({ coffee, favView = false }: Props) {
               onClick={() => removeFavorite(coffee.id)}
               className="inline-flex items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-semibold text-primary transition hover:bg-primary hover:text-secondary"
             >
-              Quitar 
+              Quitar
             </button>
           }
 
