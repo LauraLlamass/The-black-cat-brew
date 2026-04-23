@@ -54,7 +54,7 @@ function CoffeesPage() {
 
   return (
     <section>
-      <div className="mx-auto max-w-7xl px-6 text-primary">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-primary">
         <SectionHeading title="Descubre nuestros cafés" />
 
         <div className="mb-10 flex flex-wrap gap-4">
@@ -147,7 +147,7 @@ function CoffeesPage() {
         </div>
 
         {loading ? (
-          <div className="mt-10 rounded-xl bg-secondary p-6 text-center text-primary shadow-md">
+          <div className="mt-10 rounded-xl bg-secondary p-5 text-center text-primary shadow-md sm:p-6">
             Cargando cafés...
           </div>
         ) : error ? (
@@ -155,11 +155,11 @@ function CoffeesPage() {
             {error}
           </div>
         ) : filteredCoffees.length === 0 ? (
-          <div className="mt-10 rounded-xl bg-secondary p-6 text-center text-primary shadow-md">
+          <div className="mt-10 rounded-xl bg-secondary p-5 text-center text-primary shadow-md sm:p-6">
             No hay cafés que coincidan con esos filtros.
           </div>
         ) : (
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {filteredCoffees.map((coffee) => (
               <CoffeeCard key={coffee.id} coffee={coffee} />
             ))}

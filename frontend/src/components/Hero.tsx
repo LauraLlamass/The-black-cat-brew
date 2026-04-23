@@ -6,7 +6,7 @@ function Hero() {
       <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-2 md:items-center">
         <div className="pb-10 md:pb-16">
 
-          <h1 className="max-w-md text-6xl font-black leading-tight text-primary md:text-6xl">
+          <h1 className="max-w-md text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-primary">
             The Black Cat Brew
           </h1>
 
@@ -19,7 +19,7 @@ function Hero() {
             <img
               src={enProceso}
               alt="Imagen principal de The Black Cat Brew"
-              className="h-[360px] w-full object-cover"
+              className="h-[240px] sm:h-[300px] md:h-[360px] w-full object-cover"
             />
           </div>
         </div>

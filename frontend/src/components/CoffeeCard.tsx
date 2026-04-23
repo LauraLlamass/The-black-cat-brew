@@ -20,7 +20,7 @@ function CoffeeCard({ coffee, favView = false }: Props) {
   };
 
   return (
-    <article className="relative overflow-hidden rounded-2xl bg-secondary p-3 shadow-md shadow-black/10 transition hover:-translate-y-1 hover:shadow-xl">
+    <article className="relative overflow-hidden rounded-2xl bg-secondary p-2.5 sm:p-3 shadow-md shadow-black/10 transition hover:-translate-y-1 hover:shadow-xl">
       {!favView ? (
         <button
           onClick={handleFavoriteClick}
@@ -70,7 +70,7 @@ function CoffeeCard({ coffee, favView = false }: Props) {
 
       <div className="overflow-hidden rounded-[1.5rem] border border-primary/10 bg-brand-white">
         <div className="bg-primary px-4 py-3 text-center">
-          <h3 className="text-lg font-black tracking-[0.2em] text-brand-white">
+          <h3 className="text-base font-black tracking-[0.15em] text-brand-white sm:text-lg">
             {coffee.name.toUpperCase()}
           </h3>
         </div>
@@ -79,8 +79,7 @@ function CoffeeCard({ coffee, favView = false }: Props) {
           <img
             src={`${apiUrl}${coffee.image}`}
             alt={coffee.name}
-            className="h-48 w-full object-contain transition duration-300 hover:scale-105"
-          />
+className="h-40 w-full object-contain transition duration-300 hover:scale-105 sm:h-48"          />
         </div>
 
         <div className="px-5 py-4 text-center">
@@ -93,12 +92,12 @@ function CoffeeCard({ coffee, favView = false }: Props) {
 
         <div className="border-t border-primary/15" />
 
-        <div className="grid grid-cols-2 gap-x-4 gap-y-4 px-5 py-4">
+        <div className="grid grid-cols-2 gap-x-3 gap-y-4 px-4 py-4 sm:gap-x-4 sm:px-5">
           <div className="text-center">
             <p className="text-[10px] font-semibold uppercase tracking-wide text-primary/50">
               Intensidad
             </p>
-            <p className="mt-1 text-sm font-semibold text-primary">
+            <p className="mt-1 text-sm font-semibold text-primary sm:text-base">
               {coffee.intensity}
             </p>
           </div>
@@ -107,7 +106,7 @@ function CoffeeCard({ coffee, favView = false }: Props) {
             <p className="text-[10px] font-semibold uppercase tracking-wide text-primary/50">
               Acidez
             </p>
-            <p className="mt-1 text-sm font-semibold text-primary">
+            <p className="mt-1 text-sm font-semibold text-primary sm:text-base">
               {coffee.acidity}
             </p>
           </div>
