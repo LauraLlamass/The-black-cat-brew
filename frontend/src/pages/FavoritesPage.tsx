@@ -1,6 +1,7 @@
 import { useFavorites } from "../context/FavoritesContext";
 import SectionHeading from "../components/SectionHeading";
 import CoffeeCard from "../components/CoffeeCard";
+import FavoriteNote from "../components/FavoriteNote";
 
 function FavoritesPage() {
   const { favorites } = useFavorites();
@@ -23,9 +24,12 @@ function FavoritesPage() {
           </div>
         ) : (
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {favorites.map((coffee) => (
-               <CoffeeCard key={coffee.id} coffee={coffee} favView={true}/>
-            ))}
+{favorites.map((coffee) => (
+  <div key={coffee.id}>
+    <CoffeeCard coffee={coffee} favView={true} />
+    <FavoriteNote coffeeId={coffee.id} />
+  </div>
+))}
           </div>
         )}
       </div>

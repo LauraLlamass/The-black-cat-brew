@@ -4,7 +4,7 @@ function ComoFunciona() {
             <div className="mx-auto max-w-7xl px-6">
 
                 <div className="mb-10">
-                    <h2 className="text-3xl font-black text-primary md:text-4xl ">
+                    <h2 className="text-3xl font-black text-primary md:text-4xl">
                         Cómo funciona
                     </h2>
                     
@@ -43,7 +43,7 @@ function ComoFunciona() {
                             Guarda favoritos
                         </h3>
                         <p className="mt-3 text-sm text-primary">
-                            Crea tu colección personal y vuelve a tus cafés cuando quieras.
+                            Crea tu colección personal y escribe tus notas, sensaciones o impresiones.
                         </p>
                     </article>
 

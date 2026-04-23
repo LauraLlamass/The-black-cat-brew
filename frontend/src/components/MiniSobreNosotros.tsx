@@ -3,7 +3,7 @@ function MiniSobreNosotros() {
     return (
         <section className="py-16">
             <div className="mx-auto max-w-7xl px-6">
-                <div className="grid gap-8 rounded-[1rem] border border-primary bg-brand-white p-8  md:grid-cols-2 md:items-center">
+                <div className="grid gap-8 rounded-[1rem] border border-primary bg-brand-white p-8  md:grid-cols-2 md:items-center transition duration-300 ease-out hover:scale-105">
                     <div>
                         <p className="text-sm font-semibold tracking-wide text-accent">
                             SOBRE NOSOTROS

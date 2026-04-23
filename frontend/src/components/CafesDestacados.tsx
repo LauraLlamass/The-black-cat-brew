@@ -37,7 +37,7 @@ function CafesDestacados() {
   return (
     <section className="py-16">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="text-3xl font-black text-primary">
+        <h2 className="text-3xl font-black text-primary md:text-4xl">
           Cafés destacados
         </h2>
 
