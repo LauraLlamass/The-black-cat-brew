@@ -10,7 +10,7 @@ function Hero() {
             The Black Cat Brew
           </h1>
 
-          <p className="mt-5 max-w-md text-base leading-8 text-primary bg-brand-white p-4 rounded-full">
+          <p className="mt-5 max-w-md text-base leading-8 text-primary bg-brand-white p-4">
             Descubre cafés únicos, compara perfiles de sabor y guarda tus favoritos en un solo lugar.          </p>
         </div>
 
