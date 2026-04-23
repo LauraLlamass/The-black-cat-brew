@@ -43,9 +43,9 @@ function CafesDestacados() {
 
         <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {cafes.map((cafe) => (
-            <article
+            <article 
               key={cafe.id}
-              className="rounded-[1.5rem] border border-primary bg-brand-white p-6"
+              className="rounded-[1rem] border border-primary bg-brand-white p-6 transition duration-300 ease-out hover:scale-105"
             >
               <img
                 src={`http://localhost:3000${cafe.image}`}
