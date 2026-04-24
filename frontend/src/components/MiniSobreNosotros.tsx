@@ -28,7 +28,7 @@ function MiniSobreNosotros() {
                         </p>
 
                         <span className="mt-4 block text-right text-sm font-semibold text-primary/70">
-                            — The Black Cat Brew
+                            — The Black Cat 
                         </span>
                     </div>
 

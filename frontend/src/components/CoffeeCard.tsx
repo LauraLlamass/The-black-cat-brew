@@ -25,7 +25,7 @@ function CoffeeCard({ coffee, favView = false }: Props) {
         <button
           onClick={handleFavoriteClick}
           aria-label={favorite ? "Quitar de favoritos" : "Añadir a favoritos"}
-          className={`absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full border transition ${favorite
+          className={`absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-[1rem] border transition ${favorite
               ? "border-accent bg-accent text-primary"
               : "border-secondary bg-primary text-brand-white hover:border-accent hover:bg-accent hover:text-brand-white"
             }`}
@@ -49,7 +49,7 @@ function CoffeeCard({ coffee, favView = false }: Props) {
         <button
           onClick={() => removeFavorite(coffee.id)}
           aria-label="Quitar de favoritos"
-          className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-accent bg-accent text-primary transition hover:bg-primary hover:text-accent"
+          className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-[1rem] border border-accent bg-accent text-primary transition hover:bg-primary hover:text-accent"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +68,7 @@ function CoffeeCard({ coffee, favView = false }: Props) {
         </button>
       )}
 
-      <div className="overflow-hidden rounded-[1.5rem] border border-primary/10 bg-brand-white">
+      <div className="overflow-hidden rounded-[1rem] border border-primary/10 bg-brand-white">
         <div className="bg-primary px-4 py-3 text-center">
           <h3 className="text-base font-black tracking-[0.15em] text-brand-white sm:text-lg">
             {coffee.name.toUpperCase()}
