@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 border-b border-secondary bg-primary backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-6 py-4">
         {/* Logo */}
         <Link
           to="/"
@@ -12,11 +12,19 @@ function Navbar() {
           The Black Cat Brew
         </Link>
 
+        <nav className="hidden gap-6 md:flex">
+          {/* links */}
+        </nav>
+
+        <button className="md:hidden rounded-full border border-primary px-4 py-2 text-sm font-semibold text-primary">
+          Menú
+        </button>
+
         {/* Nav */}
         <nav className="hidden items-center gap-4 md:flex">
           <Link
             to="/"
-              className="rounded-full border border-secondary px-5 py-2 text-sm font-medium text-secondary transition hover:bg-accent"
+            className="rounded-full border border-secondary px-5 py-2 text-sm font-medium text-secondary transition hover:bg-accent"
           >
             Inicio
           </Link>

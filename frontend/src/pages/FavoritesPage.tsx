@@ -8,13 +8,13 @@ function FavoritesPage() {
 
   return (
     <section>
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Tus cafés favoritos"
         />
 
         {favorites.length === 0 ? (
-          <div className="rounded-2xl border border-secondary/40 bg-secondary p-10 text-center shadow-lg shadow-black/10">
+          <div className="rounded-2xl border border-secondary/40 bg-secondary p-6 text-center shadow-lg shadow-black/10 sm:p-10">
             <p className="text-lg font-medium text-primary">
               Todavía no has añadido favoritos.
             </p>
@@ -23,7 +23,7 @@ function FavoritesPage() {
             </p>
           </div>
         ) : (
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
 {favorites.map((coffee) => (
   <div key={coffee.id}>
     <CoffeeCard coffee={coffee} favView={true} />

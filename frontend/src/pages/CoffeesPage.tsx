@@ -57,7 +57,7 @@ function CoffeesPage() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-primary">
         <SectionHeading title="Descubre nuestros cafés" />
 
-        <div className="mb-10 flex flex-wrap gap-4">
+        <div className="mb-8 flex flex-wrap gap-3 sm:mb-10 sm:gap-4">
           {/* Origen */}
           <div>
             <button
