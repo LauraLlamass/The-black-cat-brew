@@ -79,7 +79,7 @@ export const coffees = [
     name: "India",
     intensity: "Media-Alta",
     acidity: "Baja",
-    description: "Cultivado bajo sombra ofrece un perfil más espciado y enérgico.",
+    description: "Cultivado bajo sombra ofrece un perfil más especiado y enérgico.",
     image: "/images/india.png",
     amazonUrl: "https://amazon.com",
   },
