@@ -48,7 +48,7 @@ function CafesDestacados() {
               className="rounded-[1rem] border border-primary bg-brand-white p-6 transition duration-300 ease-out hover:scale-105"
             >
               <img
-                src={`http://localhost:3000${cafe.image}`}
+                src={`https://the-black-cat-brew.onrender.com/api/v1/coffees{cafe.image}`}
                 alt={cafe.name}
                 className="mb-4 h-40 w-full object-contain"
               />
