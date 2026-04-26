@@ -7,6 +7,8 @@ type Cafe = {
   image: string;
 };
 
+const API_URL = "https://the-black-cat-brew.onrender.com";
+
 function CafesDestacados() {
   const [cafes, setCafes] = useState<Cafe[]>([]);
   const [loading, setLoading] = useState(true);
@@ -14,12 +16,11 @@ function CafesDestacados() {
   useEffect(() => {
     const obtenerCafes = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/v1/coffees");
+        const res = await fetch(`${API_URL}/api/v1/coffees`);
         const data: Cafe[] = await res.json();
 
-        // destacados elegidos
         const ids = ["1", "3", "4", "9"];
-        const destacados = data.filter((c) => ids.includes(c.id));
+        const destacados = data.filter((c) => ids.includes(String(c.id)));
 
         setCafes(destacados);
       } catch (error) {
@@ -43,12 +44,12 @@ function CafesDestacados() {
 
         <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {cafes.map((cafe) => (
-            <article 
+            <article
               key={cafe.id}
               className="rounded-[1rem] border border-primary bg-brand-white p-6 transition duration-300 ease-out hover:scale-105"
             >
               <img
-                src={`https://the-black-cat-brew.onrender.com/api/v1/coffees{cafe.image}`}
+                src={`${API_URL}${cafe.image}`}
                 alt={cafe.name}
                 className="mb-4 h-40 w-full object-contain"
               />
