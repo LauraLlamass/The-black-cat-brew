@@ -1,6 +1,7 @@
 import type { Coffee } from "../types/coffee";
 import { useFavorites } from "../context/FavoritesContext";
 import { getCoffeeImageUrl } from "../utils/coffeeImage";
+import { Link } from "react-router-dom";
 
 interface Props {
   coffee: Coffee;
@@ -70,19 +71,23 @@ function CoffeeCard({ coffee, favView = false }: Props) {
 
       <div className="overflow-hidden rounded-[1rem] border border-primary/10 bg-brand-white">
         <div className="bg-primary px-4 py-3 text-center">
-          <h3 className="text-base font-black tracking-[0.15em] text-brand-white sm:text-lg">
-            {coffee.name.toUpperCase()}
-          </h3>
+          <Link to={`/catalogo/${coffee.id}`} className="rounded-sm focus:outline-none focus:ring-2 focus:ring-accent">
+            <h3 className="text-base font-black tracking-[0.15em] text-brand-white sm:text-lg">
+              {coffee.name.toUpperCase()}
+            </h3>
+          </Link>
         </div>
 
         <div className="bg-brand-white p-4">
-          <img
-            src={getCoffeeImageUrl(coffee.image)}
-            alt={coffee.name}
-            loading="lazy"
-            decoding="async"
-            className="h-40 w-full object-contain transition duration-300 hover:scale-105 sm:h-48"
-          />
+          <Link to={`/catalogo/${coffee.id}`} aria-label={`Ver detalles de ${coffee.name}`}>
+            <img
+              src={getCoffeeImageUrl(coffee.image)}
+              alt={coffee.name}
+              loading="lazy"
+              decoding="async"
+              className="h-40 w-full object-contain transition duration-300 hover:scale-105 sm:h-48"
+            />
+          </Link>
         </div>
 
         <div className="px-5 py-4 text-center">

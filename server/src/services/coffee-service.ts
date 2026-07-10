@@ -14,12 +14,18 @@ export function createCoffee(newCoffee: {
   intensity: string;
   acidity: string;
   notes: string[];
+  recommendedBrewing?: string[];
   description: string;
   image: string;
   amazonUrl: string;
+  sourceUrl?: string;
+  sourceLabel?: string;
 }) {
   const coffee = {
     id: String(coffees.length + 1),
+    recommendedBrewing: [],
+    sourceUrl: "",
+    sourceLabel: "",
     ...newCoffee,
   };
 
@@ -35,9 +41,12 @@ export function updateCoffee(
     intensity: string;
     acidity: string;
     notes: string[];
+    recommendedBrewing: string[];
     description: string;
     image: string;
     amazonUrl: string;
+    sourceUrl: string;
+    sourceLabel: string;
   }>
 ) {
   const coffee = coffees.find((item) => item.id === id);

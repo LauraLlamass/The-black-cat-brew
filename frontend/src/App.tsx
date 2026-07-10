@@ -6,6 +6,7 @@ import FavoritesPage from "./pages/FavoritesPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import HomePage from "./pages/HomePages";
 import AboutPage from "./pages/AboutPage";
+import CoffeeDetailPage from "./pages/CoffeeDetailPage";
 import granos from "./assets/fondoGranos.png";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/catalogo" element={<CoffeesPage />} />
+          <Route path="/catalogo/:coffeeId" element={<CoffeeDetailPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<NotFoundPage />} />

@@ -9,6 +9,7 @@ function CoffeesPage() {
   const [selectedOrigin, setSelectedOrigin] = useState("Todos");
   const [selectedIntensity, setSelectedIntensity] = useState("Todos");
   const [selectedAcidity, setSelectedAcidity] = useState("Todos");
+  const [search, setSearch] = useState("");
   const [openFilter, setOpenFilter] = useState<string | null>(null);
 
   const sortedCoffees = useMemo(() => {
@@ -29,6 +30,10 @@ function CoffeesPage() {
 
   const filteredCoffees = useMemo(() => {
     return sortedCoffees.filter((coffee) => {
+      const normalizedSearch = search.trim().toLocaleLowerCase("es");
+      const matchesSearch = coffee.name
+        .toLocaleLowerCase("es")
+        .includes(normalizedSearch);
       const matchesOrigin =
         selectedOrigin === "Todos" || coffee.name === selectedOrigin;
 
@@ -38,9 +43,23 @@ function CoffeesPage() {
       const matchesAcidity =
         selectedAcidity === "Todos" || coffee.acidity === selectedAcidity;
 
-      return matchesOrigin && matchesIntensity && matchesAcidity;
+      return matchesSearch && matchesOrigin && matchesIntensity && matchesAcidity;
     });
-  }, [sortedCoffees, selectedOrigin, selectedIntensity, selectedAcidity]);
+  }, [sortedCoffees, search, selectedOrigin, selectedIntensity, selectedAcidity]);
+
+  const hasActiveFilters =
+    search !== "" ||
+    selectedOrigin !== "Todos" ||
+    selectedIntensity !== "Todos" ||
+    selectedAcidity !== "Todos";
+
+  const clearFilters = () => {
+    setSearch("");
+    setSelectedOrigin("Todos");
+    setSelectedIntensity("Todos");
+    setSelectedAcidity("Todos");
+    setOpenFilter(null);
+  };
 
   const toggleFilter = (filterName: string) => {
     setOpenFilter((prev) => (prev === filterName ? null : filterName));
@@ -56,6 +75,31 @@ function CoffeesPage() {
     <section>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-primary">
         <SectionHeading title="Descubre nuestros cafés" />
+
+        <div className="mb-5 flex flex-col gap-3 sm:flex-row">
+          <label className="relative flex-1">
+            <span className="sr-only">Buscar café por nombre</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="absolute left-4 top-1/2 size-5 -translate-y-1/2 text-primary/60">
+              <circle cx="11" cy="11" r="7" strokeWidth="2" />
+              <path d="m16 16 4 4" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+            <input
+              type="search"
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+              placeholder="Buscar por nombre…"
+              className="w-full rounded-full border border-primary bg-brand-white py-3 pl-12 pr-5 text-sm outline-none transition placeholder:text-primary/50 focus:ring-2 focus:ring-accent"
+            />
+          </label>
+          <button
+            type="button"
+            onClick={clearFilters}
+            disabled={!hasActiveFilters}
+            className="rounded-full border border-primary px-5 py-3 text-sm font-semibold transition hover:bg-primary hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            Limpiar filtros
+          </button>
+        </div>
 
         <div className="mb-8 flex flex-wrap gap-3 sm:mb-10 sm:gap-4">
           {/* Origen */}

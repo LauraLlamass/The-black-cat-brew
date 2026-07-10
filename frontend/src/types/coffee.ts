@@ -5,7 +5,10 @@ export interface Coffee {
   intensity: string;
   acidity: string;
   notes: string[];
+  recommendedBrewing: string[];
   description: string;
   image: string;
   amazonUrl: string;
+  sourceUrl: string;
+  sourceLabel: string;
 }
