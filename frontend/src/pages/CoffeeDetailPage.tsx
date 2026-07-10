@@ -36,7 +36,7 @@ function CoffeeDetailPage() {
       </Link>
 
       <article className="grid gap-8 rounded-3xl border border-primary/10 bg-brand-white p-6 shadow-lg shadow-black/5 md:grid-cols-2 md:p-10">
-        <div className="flex min-h-72 items-center justify-center rounded-2xl bg-secondary p-8">
+        <div className="flex min-h-72 items-center justify-center rounded-2xl border border-primary/10 bg-brand-white p-8">
           <img src={getCoffeeImageUrl(coffee.image)} alt={coffee.name} className="max-h-80 w-full object-contain" />
         </div>
 
