@@ -17,7 +17,13 @@ app.use(cors({
 
 app.use(express.json());
 
-app.use("/images", express.static(path.join(__dirname, "../public/images")));
+app.use(
+  "/images",
+  express.static(path.join(__dirname, "../public/images"), {
+    immutable: true,
+    maxAge: "1y",
+  }),
+);
 
 app.get("/api/v1/health", (_req, res) => {
   res.status(200).json({ message: "API working" });

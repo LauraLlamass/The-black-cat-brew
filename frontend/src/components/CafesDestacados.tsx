@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { getCoffeeImageUrl } from "../utils/coffeeImage";
 
 type Cafe = {
   id: string;
@@ -49,8 +50,10 @@ function CafesDestacados() {
               className="rounded-[1rem] border border-primary bg-brand-white p-6 transition duration-300 ease-out hover:scale-105"
             >
               <img
-                src={`${API_URL}${cafe.image}`}
+                src={getCoffeeImageUrl(cafe.image)}
                 alt={cafe.name}
+                loading="eager"
+                decoding="async"
                 className="mb-4 h-40 w-full object-contain"
               />
 

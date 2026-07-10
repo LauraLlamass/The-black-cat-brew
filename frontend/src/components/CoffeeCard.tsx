@@ -1,5 +1,6 @@
 import type { Coffee } from "../types/coffee";
 import { useFavorites } from "../context/FavoritesContext";
+import { getCoffeeImageUrl } from "../utils/coffeeImage";
 
 interface Props {
   coffee: Coffee;
@@ -9,7 +10,6 @@ interface Props {
 function CoffeeCard({ coffee, favView = false }: Props) {
   const { addFavorite, removeFavorite, isFavorite } = useFavorites();
   const favorite = isFavorite(coffee.id);
-  const apiUrl = "https://the-black-cat-brew.onrender.com";
 
   const handleFavoriteClick = () => {
     if (favorite) {
@@ -77,9 +77,12 @@ function CoffeeCard({ coffee, favView = false }: Props) {
 
         <div className="bg-brand-white p-4">
           <img
-            src={`${apiUrl}${coffee.image}`}
+            src={getCoffeeImageUrl(coffee.image)}
             alt={coffee.name}
-className="h-40 w-full object-contain transition duration-300 hover:scale-105 sm:h-48"          />
+            loading="lazy"
+            decoding="async"
+            className="h-40 w-full object-contain transition duration-300 hover:scale-105 sm:h-48"
+          />
         </div>
 
         <div className="px-5 py-4 text-center">
